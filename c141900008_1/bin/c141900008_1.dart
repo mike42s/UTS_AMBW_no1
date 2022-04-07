@@ -11,7 +11,7 @@ int fungsi_pohon(int input, String a) {
 
   int x = a.codeUnitAt(0);
   //print(x);
-  int y = a.codeUnitAt(3);
+  int y = a.codeUnitAt(h - 1);
   stdout.write((String.fromCharCode(x)));
   stdout.write((String.fromCharCode(y)));
   // if (input > 9) {
@@ -40,6 +40,7 @@ int fungsi_pohon(int input, String a) {
     if (input % 2 != 0) {
       counter = 0;
       if (i < (input / 2).round()) {
+        int temp = 0;
         for (int k = mid; k >= i; k--) {
           stdout.write("*");
         }
@@ -83,7 +84,7 @@ int fungsi_pohon(int input, String a) {
         }
       } else {
         int temp = 0;
-        if (counter3 == 2) {
+        if (counter3 == a.length - 1) {
           xs == false;
         }
         for (int k = i - mid; k > 1; k--) {
